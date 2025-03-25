@@ -1,66 +1,89 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🎓 **Absensi Guru** 📌  
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistem **Absensi Guru** berbasis web menggunakan **Laravel**, dirancang untuk mencatat dan mengelola kehadiran guru secara efisien. Mendukung metode **QR Code & Manual**, dengan laporan real-time dan fitur rekapitulasi otomatis!  
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-10-red?style=flat&logo=laravel)  
+![PHP](https://img.shields.io/badge/PHP-8-blue?style=flat&logo=php)  
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange?style=flat&logo=mysql)  
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-purple?style=flat&logo=bootstrap)  
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🚀 **Fitur Utama**
+✅ **Role-Based Access Control** (Admin, Guru, Kepala Sekolah)  
+✅ **Absensi Manual & QR Code**  
+✅ **Jam Masuk & Keluar Otomatis**  
+✅ **Rekap Kehadiran Bulanan & Semester**  
+✅ **Ekspor Data ke Excel**  
+✅ **Dashboard Interaktif** dengan Statistik Kehadiran  
+✅ **Notifikasi & Monitoring Kehadiran**  
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🏗️ **Teknologi yang Digunakan**
+🔹 **Laravel 10** – Framework PHP  
+🔹 **MySQL** – Database Management  
+🔹 **Blade** – Laravel Templating Engine  
+🔹 **Bootstrap / Tailwind CSS** – Frontend Styling  
+🔹 **Maatwebsite Excel** – Ekspor Data  
+🔹 **QR Code Generator** – Untuk absensi berbasis kode QR  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 📥 **Instalasi & Konfigurasi**
+### 1️⃣ **Clone Repository**
+```sh
+git clone https://github.com/Firmansyah441/Absensi-guru.git
+cd Absensi-guru
+```
+### 2️⃣ **Install Dependencies**
+```sh
+composer install
+npm install
+```
+### 3️⃣ **Konfigurasi Environment**
+- Salin file `.env.example` dan ubah ke `.env`
+- Atur koneksi database di `.env`
+- Generate key Laravel  
+  ```sh
+  php artisan key:generate
+  ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 4️⃣ **Setup Database**
+```sh
+php artisan migrate --seed
+```
 
-## Laravel Sponsors
+### 5️⃣ **Jalankan Server**
+```sh
+php artisan serve
+```
+Buka di browser: **`http://127.0.0.1:8000`** 🎉  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-### Premium Partners
+## 📊 **Struktur Database**
+📌 **Tabel Utama**:  
+- **`gurus`** → Data guru  
+- **`tapels`** → Tahun pelajaran  
+- **`absens`** → Rekap absensi  
+- **`liburs`** → Hari libur sekolah  
+- **`qr_codes`** → Data QR Code  
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+---
 
-## Contributing
+## 🤝 **Kontribusi**
+🚀 **Pull Request** dan **Issues** selalu diterima! Jika ada bug atau ide pengembangan, silakan buat **Issue** atau langsung kontribusi melalui **PR**.  
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📜 **Lisensi**
+Proyek ini dirilis di bawah lisensi **MIT License** 📄  
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+💡 **Dikembangkan oleh:** [Firmansyah441](https://github.com/Firmansyah441)  
 
-## Security Vulnerabilities
+🔥 **Absensi Guru - Meningkatkan Efisiensi Kehadiran Guru dengan Teknologi!** 🔥  
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Thanks
